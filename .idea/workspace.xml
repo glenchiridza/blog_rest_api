@@ -4,7 +4,6 @@
     <list default="true" id="b4a6be14-ca02-49eb-9b30-33c1b0964487" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogapi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapi/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapi/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
