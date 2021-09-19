@@ -21,3 +21,28 @@ class PostCreateView(mixins.ListModelMixin,
         return self.create(request, *args, **kwargs)
 
 
+class GetSinglePostView(mixins.ListModelMixin, generics.RetrieveAPIView):
+    serializer_class = BlogPostSerializer
+    lookup_field = 'pk'
+
+    def get(self, request, *args, **kwargs):
+        return self.list(self, request, *args, **kwargs)
+
+    def get_queryset(self):
+        queryset = BlogPost.objects.filter(id=self.kwargs['pk'])
+        return queryset
+
+
+class PostUpdateView(generics.UpdateAPIView):
+    serializer_class = UpdateBlogPostSerializer
+    lookup_field = 'pk'
+
+    def get_queryset(self):
+        queryset = BlogPost.objects.filter(id=self.kwargs['pk'])
+        return queryset
+
+
+class PostDeleteView(generics.DestroyAPIView):
+    serializer_class = DeleteBlogPostSerializer
+    queryset = BlogPost.objects.all()
+    lookup_field = 'pk'
