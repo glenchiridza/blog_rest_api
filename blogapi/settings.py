@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
@@ -43,6 +44,8 @@ INSTALLED_APPS = [
     'users',
 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,7 +126,7 @@ STATIC_URL = '/static/'
 # STATICFILES_DIR = (
 #     os.path.join(BASE_DIR,'static_files')
 # )
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
