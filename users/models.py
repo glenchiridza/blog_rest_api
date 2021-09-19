@@ -3,7 +3,11 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    pass
+    is_writer = models.BooleanField(default=False)
+    is_subscriber = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.username}"
 
 
 class Writer(models.Model):
