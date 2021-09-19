@@ -49,3 +49,15 @@ class CustomRegisterSerializer(RegisterSerializer):
         adapter.save_user(request, user, self)
 
         return user
+
+
+class WriterProfileUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Writer
+        fields = ('first_name', 'last_name', 'location', 'profile_image', 'bio')
+
+
+class SubscriberProfileUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Writer
+        fields = ('location', 'profile_image', 'bio')
